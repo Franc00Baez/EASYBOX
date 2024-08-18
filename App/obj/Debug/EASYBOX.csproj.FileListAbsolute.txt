@@ -1,0 +1,10 @@
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.csproj.AssemblyReference.cache
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.Properties.Resources.resources
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.UserLog.resources
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.csproj.GenerateResource.cache
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.csproj.CoreCompileInputs.cache
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\bin\Debug\EASYBOX.exe.config
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\bin\Debug\EASYBOX.exe
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\bin\Debug\EASYBOX.pdb
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.exe
+C:\Users\Franco\FACULTAD\utn-practices\C# . NET\PROJECTO_WindowsForms\EASYBOX\obj\Debug\EASYBOX.pdb
