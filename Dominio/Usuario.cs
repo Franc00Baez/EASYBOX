@@ -8,30 +8,31 @@ namespace Dominio
 {
     public class Usuario
     {
-        public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public RoleType Rol { get; set; }
+        public int IdRol { get; set; }
         public string ImgPerfil { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public bool Eliminado { get; set; }
+        public bool Eliminated { get; set; }
+        public DateTime CreationDate { get; set; }
 
-        public Usuario()
+        public Usuario(int id, string name,string email, string password, int idrol, string imgperfil, bool eliminated, DateTime creationdate)
         {
-            IdUsuario = 0;
-            Eliminado = false;
-        }
-
-        public Usuario (int idusuario, string nombre, string email, string password, RoleType rol, string imgperfil, bool eliminado)
-        {
-            IdUsuario = idusuario;
-            Nombre = nombre;
+            Id = id;
+            Name = name;
             Email = email;
             Password = password;
-            Rol = rol;
-            FechaCreacion = DateTime.Now;
-            Eliminado = eliminado;
+            IdRol = idrol;
+            ImgPerfil = imgperfil;
+            Eliminated = eliminated;
+            CreationDate = creationdate;
+        }
+
+        public override string ToString()
+        {
+            string info = "ID: " + Id + "\nNombre: " + Name + "\nEmail: " + Email + "\nPassword: " + Password + "\nidRol: " + IdRol + "\nEliminated: " + Eliminated.ToString() + "\nFecha de creacion: " + CreationDate.ToString("G");
+            return info;
         }
     }
 }

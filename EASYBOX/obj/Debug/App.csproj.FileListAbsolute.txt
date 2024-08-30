@@ -1,0 +1,15 @@
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\EASYBOX.exe.config
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\EASYBOX.exe
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\EASYBOX.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Dominio.dll
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Servicio.dll
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Dominio.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Servicio.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.AssemblyReference.cache
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.Properties.Resources.resources
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.UserLog.resources
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.GenerateResource.cache
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.CoreCompileInputs.cache
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.CopyComplete
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.exe
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.pdb
