@@ -19,10 +19,24 @@ namespace EASYBOX
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnEnter_MouseEnter(object sender, EventArgs e)
         {
-
+            btnEnter.BackColor = Color.Blue;
         }
 
+        private void btnEnter_MouseLeave(object sender, EventArgs e)
+        {
+            btnEnter.BackColor = Color.LightSkyBlue;
+        }
+
+        private void btnSingin_MouseEnter(object sender, EventArgs e)
+        {
+            btnSingin.BackColor = Color.Blue;
+        }
+
+        private void btnSingin_MouseLeave(object sender, EventArgs e)
+        {
+            btnSingin.BackColor = Color.LightSkyBlue;
+        }
     }
 }
