@@ -29,89 +29,81 @@ namespace EASYBOX
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLog));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.txtbUser = new System.Windows.Forms.TextBox();
-            this.txtbPassword = new System.Windows.Forms.TextBox();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.lbPassword = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(386, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(541, 414);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(85, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(371, 350);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("MS UI Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.Location = new System.Drawing.Point(76, 9);
+            this.lbTitulo.BackColor = System.Drawing.Color.Azure;
+            this.lbTitulo.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Location = new System.Drawing.Point(83, 37);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(237, 37);
-            this.lbTitulo.TabIndex = 0;
-            this.lbTitulo.Text = "Iniciar Sesion ";
+            this.lbTitulo.Size = new System.Drawing.Size(159, 57);
+            this.lbTitulo.TabIndex = 1;
+            this.lbTitulo.Text = "Sing up";
+            this.lbTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtbUser
+            // iconPictureBox1
             // 
-            this.txtbUser.Location = new System.Drawing.Point(12, 95);
-            this.txtbUser.Name = "txtbUser";
-            this.txtbUser.Size = new System.Drawing.Size(335, 23);
-            this.txtbUser.TabIndex = 1;
-            // 
-            // txtbPassword
-            // 
-            this.txtbPassword.Location = new System.Drawing.Point(12, 151);
-            this.txtbPassword.Name = "txtbPassword";
-            this.txtbPassword.Size = new System.Drawing.Size(335, 23);
-            this.txtbPassword.TabIndex = 2;
-            // 
-            // lbUser
-            // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(12, 79);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(89, 13);
-            this.lbUser.TabIndex = 3;
-            this.lbUser.Text = "User o Email";
-            // 
-            // lbPassword
-            // 
-            this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(12, 135);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(67, 13);
-            this.lbPassword.TabIndex = 4;
-            this.lbPassword.Text = "Password";
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIngresar.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(115, 196);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(141, 39);
-            this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 59;
+            this.iconPictureBox1.Location = new System.Drawing.Point(232, 37);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(59, 60);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
             // 
             // UserLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(362, 259);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.lbUser);
-            this.Controls.Add(this.txtbPassword);
-            this.Controls.Add(this.txtbUser);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(926, 412);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.lbTitulo);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "UserLog";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EasyBox";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,11 +111,10 @@ namespace EASYBOX
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.TextBox txtbUser;
-        private System.Windows.Forms.TextBox txtbPassword;
-        private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.Button btnIngresar;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

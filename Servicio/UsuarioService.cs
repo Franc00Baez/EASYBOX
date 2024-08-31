@@ -71,31 +71,32 @@ namespace Servicio
             }
         }
 
-        public int InsertUsuario(Usuario user)
+        public bool InsertUsuario(Usuario user)
         {
-            string query = @"INSERT INTO USUARIOS (nombre, email, contraseña, rol, img_perfil) 
-                            VALUES (@nombre, @email, @contraseña, @rol, @img_perfil);";
+            string query = "INSERT INTO USUARIOS (nombre, email, password, rol, img_perfil)" +
+                            "VALUES (@nombre, @email, @contraseña, @rol, @img_perfil);";
             string hash_password = PasswordHasher.HashPassword(user.Password);
-            int affected_rows;
+            bool userInserted = false;
+
+            SqlParameter[] parameters = new SqlParameter[]
+                    {
+                        new SqlParameter("@nombre", user.Name),
+                        new SqlParameter("@email", user.Email),
+                        new SqlParameter("@contraseña", hash_password),
+                        new SqlParameter("@rol", user.IdRol),
+                        new SqlParameter("@img_perfil", (object)user.ImgPerfil ?? DBNull.Value),
+
+                    };
 
             using (SqlDbManager dbManager = new SqlDbManager())
             {
                 try
                 {
                     dbManager.OpenConnection();
-                    SqlParameter[] parameters = new SqlParameter[]
-                    {
-                        new SqlParameter("@nombre", user.Name),
-                        new SqlParameter("@email", user.Email),
-                        new SqlParameter("@contrasea", hash_password),
-                        new SqlParameter("@rol", user.IdRol),
-                        new SqlParameter("@img_perfil", (object)user.ImgPerfil ?? DBNull.Value),
-                        
-                    };
 
-                    affected_rows = dbManager.ExecuteNonQuery(query);
+                    userInserted = dbManager.ExecuteNonQuery(query, parameters) > 0;
 
-                    return affected_rows;
+                    return userInserted;
                 }
                 catch (Exception ex)
                 {

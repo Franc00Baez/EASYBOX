@@ -13,3 +13,6 @@ C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.CoreCompileInputs.
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\App.csproj.CopyComplete
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.exe
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Helpers.dll
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Helpers.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\FontAwesome.Sharp.dll

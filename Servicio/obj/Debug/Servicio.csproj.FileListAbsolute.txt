@@ -7,3 +7,5 @@ C:\Users\Franco\FACULTAD\EASYBOX\Servicio\obj\Debug\Servicio.csproj.CoreCompileI
 C:\Users\Franco\FACULTAD\EASYBOX\Servicio\obj\Debug\Servicio.csproj.CopyComplete
 C:\Users\Franco\FACULTAD\EASYBOX\Servicio\obj\Debug\Servicio.dll
 C:\Users\Franco\FACULTAD\EASYBOX\Servicio\obj\Debug\Servicio.pdb
+C:\Users\Franco\FACULTAD\EASYBOX\Servicio\bin\Debug\Helpers.dll
+C:\Users\Franco\FACULTAD\EASYBOX\Servicio\bin\Debug\Helpers.pdb
