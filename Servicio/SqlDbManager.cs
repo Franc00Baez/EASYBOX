@@ -121,7 +121,7 @@ namespace Servicio
             // Aquí puedes implementar tu lógica de registro de errores
             Console.WriteLine($"{message} Detalles: {ex.Message}");
         }
-
+        //Branch
         public void Dispose()
         {
             if (_connection != null)
