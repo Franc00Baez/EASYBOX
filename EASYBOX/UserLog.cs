@@ -14,6 +14,7 @@ namespace EASYBOX
 {
     public partial class UserLog : Form
     {
+        private int xClic, yClic;
         public UserLog()
         {
             InitializeComponent();
@@ -43,6 +44,29 @@ namespace EASYBOX
         {
             UserRegister window = new UserRegister();
             window.ShowDialog();
+        }
+
+        private void Cross_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Min_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal) 
+                this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void UserLog_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button != MouseButtons.Left)
+            {
+                xClic = e.X; yClic = e.Y;
+            }else
+            {
+                this.Left = this.Left + (e.X);
+                this.Top = this.Top + (e.Y);
+            }
         }
     }
 }

@@ -40,9 +40,14 @@ namespace EASYBOX
             this.lbPassword = new System.Windows.Forms.Label();
             this.btnSingin = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
+            this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
+            this.Cross = new FontAwesome.Sharp.IconPictureBox();
+            this.Min = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cross)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Min)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,12 +161,53 @@ namespace EASYBOX
             this.btnEnter.MouseEnter += new System.EventHandler(this.btnEnter_MouseEnter);
             this.btnEnter.MouseLeave += new System.EventHandler(this.btnEnter_MouseLeave);
             // 
+            // iconMenuItem2
+            // 
+            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem2.Name = "iconMenuItem2";
+            this.iconMenuItem2.Size = new System.Drawing.Size(32, 19);
+            // 
+            // Cross
+            // 
+            this.Cross.BackColor = System.Drawing.Color.White;
+            this.Cross.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Cross.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.Cross.IconColor = System.Drawing.SystemColors.ControlText;
+            this.Cross.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Cross.IconSize = 16;
+            this.Cross.Location = new System.Drawing.Point(0, -1);
+            this.Cross.Name = "Cross";
+            this.Cross.Size = new System.Drawing.Size(16, 23);
+            this.Cross.TabIndex = 9;
+            this.Cross.TabStop = false;
+            this.Cross.Click += new System.EventHandler(this.Cross_Click);
+            // 
+            // Min
+            // 
+            this.Min.BackColor = System.Drawing.Color.White;
+            this.Min.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Min.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.Min.IconColor = System.Drawing.SystemColors.ControlText;
+            this.Min.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Min.IconSize = 14;
+            this.Min.Location = new System.Drawing.Point(12, -1);
+            this.Min.Name = "Min";
+            this.Min.Size = new System.Drawing.Size(14, 23);
+            this.Min.TabIndex = 10;
+            this.Min.TabStop = false;
+            this.Min.Click += new System.EventHandler(this.Min_Click);
+            // 
             // UserLog
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(833, 349);
+            this.Controls.Add(this.Min);
+            this.Controls.Add(this.Cross);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnSingin);
             this.Controls.Add(this.txtbPassword);
@@ -180,9 +226,12 @@ namespace EASYBOX
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EasyBox";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserLog_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cross)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Min)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +250,8 @@ namespace EASYBOX
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Button btnSingin;
         private System.Windows.Forms.Button btnEnter;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
+        private FontAwesome.Sharp.IconPictureBox Cross;
+        private FontAwesome.Sharp.IconPictureBox Min;
     }
 }
