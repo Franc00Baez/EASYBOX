@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Servicio;
+using Dominio;
 
 namespace EASYBOX
 {
     public partial class UserRegister : Form
     {
+        private UsuarioService userService;
         public UserRegister()
         {
             InitializeComponent();
+            userService = new UsuarioService();
+            CleanErrorMessages();
         }
 
         private void btnRegister_MouseEnter(object sender, EventArgs e)
@@ -45,16 +49,21 @@ namespace EASYBOX
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            UsuarioService service = new UsuarioService();
 
-            if(TextBoxValidation())
+            if (TextBoxValidation())
             {
-
+                Usuario user = new Usuario(0, txtbUsername.Text, txtbEmail.Text, txtbPassword.Text, 2, null, false, DateTime.Now);
+                if (userService.InsertUsuario(user))
+                    MessageBox.Show("Usuario Registrado con exito.");
+                else
+                    MessageBox.Show("Error: no se pudo registrar el usuario.");
+                
             }
         }
 
         private bool TextBoxValidation()
-        { 
+        {
+            CleanErrorMessages();
 
             if(string.IsNullOrEmpty(txtbUsername.Text))
             {
@@ -77,8 +86,28 @@ namespace EASYBOX
                 return false;
             }
 
+            if(userService.ValidateUserName(txtbUsername.Text))
+            {
+                lbErrorUsername.Text = "Username already exists.";
+                lbErrorUsername.Visible = true;
+                return false;
+            }
+
+            if (userService.ValidateEmail(txtbEmail.Text))
+            {
+                lbErrorEmail.Text = "Email already exist.";
+                lbErrorEmail.Visible = true;
+                return false;
+            }
             return true;
 
+        }
+
+        private void CleanErrorMessages()
+        {
+            lbErrorEmail.Visible = false;
+            lbErrorPassword.Visible = false;
+            lbErrorUsername.Visible = false;
         }
     }
 }

@@ -80,8 +80,8 @@ namespace Servicio
 
             SqlParameter[] parameters = new SqlParameter[]
                     {
-                        new SqlParameter("@nombre", user.Name.ToUpper()),
-                        new SqlParameter("@email", user.Email.ToUpper()),
+                        new SqlParameter("@nombre", user.Name),
+                        new SqlParameter("@email", user.Email),
                         new SqlParameter("@contraseña", hash_password),
                         new SqlParameter("@rol", user.IdRol),
                         new SqlParameter("@img_perfil", (object)user.ImgPerfil ?? DBNull.Value),
@@ -125,7 +125,68 @@ namespace Servicio
 
         public bool ValidateUserName(string username)
         {
-            int 
+            string query = @"SELECT COUNT(1)
+                            FROM USUARIOS
+                            WHERE UPPER(nombre) = UPPER(@nombre);";
+
+            bool exists;
+
+            SqlParameter[] parameters = new SqlParameter[]
+                    {
+                        new SqlParameter("@nombre", username.ToUpper())
+                    };
+
+            using (SqlDbManager dbManager = new SqlDbManager())
+            {
+                try
+                {
+                    dbManager.OpenConnection();
+
+                    exists = Convert.ToBoolean(dbManager.ExecuteScalar(query, parameters));
+
+                    return exists;
+                }catch (Exception ex)
+                {
+                    throw ex;
+                }finally
+                {
+                    dbManager.CloseConnection();
+                }
+            }
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            string query = @"SELECT COUNT(1)
+                            FROM USUARIOS
+                            WHERE UPPER(email) = UPPER(@email);";
+
+            bool exists;
+
+            SqlParameter[] parameters = new SqlParameter[]
+                    {
+                        new SqlParameter("@email", email.ToUpper())
+                    };
+
+            using (SqlDbManager dbManager = new SqlDbManager())
+            {
+                try
+                {
+                    dbManager.OpenConnection();
+
+                    exists = Convert.ToBoolean(dbManager.ExecuteScalar(query, parameters));
+
+                    return exists;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    dbManager.CloseConnection();
+                }
+            }
         }
     }
 }
