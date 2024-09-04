@@ -59,6 +59,7 @@ namespace EASYBOX
                     MessageBox.Show("Error: no se pudo registrar el usuario.");
                 
             }
+            this.Close();
         }
 
         private bool TextBoxValidation()
