@@ -38,5 +38,11 @@ namespace EASYBOX
         {
             btnSingin.BackColor = Color.LightSkyBlue;
         }
+
+        private void btnSingin_Click(object sender, EventArgs e)
+        {
+            UserRegister window = new UserRegister();
+            window.ShowDialog();
+        }
     }
 }

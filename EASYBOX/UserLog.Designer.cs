@@ -52,15 +52,15 @@ namespace EASYBOX
             this.panel1.Controls.Add(this.imgLogo);
             this.panel1.Location = new System.Drawing.Point(386, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(541, 414);
+            this.panel1.Size = new System.Drawing.Size(448, 350);
             this.panel1.TabIndex = 0;
             // 
             // imgLogo
             // 
             this.imgLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgLogo.BackgroundImage")));
-            this.imgLogo.Location = new System.Drawing.Point(73, 12);
+            this.imgLogo.Location = new System.Drawing.Point(32, 32);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(371, 334);
+            this.imgLogo.Size = new System.Drawing.Size(371, 284);
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
@@ -137,6 +137,7 @@ namespace EASYBOX
             this.btnSingin.TabIndex = 7;
             this.btnSingin.Text = "Sing in";
             this.btnSingin.UseVisualStyleBackColor = false;
+            this.btnSingin.Click += new System.EventHandler(this.btnSingin_Click);
             this.btnSingin.MouseEnter += new System.EventHandler(this.btnSingin_MouseEnter);
             this.btnSingin.MouseLeave += new System.EventHandler(this.btnSingin_MouseLeave);
             // 
@@ -160,7 +161,7 @@ namespace EASYBOX
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(926, 349);
+            this.ClientSize = new System.Drawing.Size(833, 349);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnSingin);
             this.Controls.Add(this.txtbPassword);

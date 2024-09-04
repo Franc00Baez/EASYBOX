@@ -80,8 +80,8 @@ namespace Servicio
 
             SqlParameter[] parameters = new SqlParameter[]
                     {
-                        new SqlParameter("@nombre", user.Name),
-                        new SqlParameter("@email", user.Email),
+                        new SqlParameter("@nombre", user.Name.ToUpper()),
+                        new SqlParameter("@email", user.Email.ToUpper()),
                         new SqlParameter("@contraseña", hash_password),
                         new SqlParameter("@rol", user.IdRol),
                         new SqlParameter("@img_perfil", (object)user.ImgPerfil ?? DBNull.Value),
@@ -121,6 +121,11 @@ namespace Servicio
             var fecha_creacion = Convert.ToDateTime(dataRow["fecha_creacion"]);
 
             return new Usuario(id, name, email, password, idrol, imgPerfil, eliminated, fecha_creacion);
+        }
+
+        public bool ValidateUserName(string username)
+        {
+            int 
         }
     }
 }

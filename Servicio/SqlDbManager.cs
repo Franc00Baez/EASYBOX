@@ -2,7 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-
+/*
+ * Clase con interfaz IDisposable:
+ * IDisposable es una interfaz en .NET que define un método Dispose() que es utilizado para liberar
+ * recursos no administrados de manera explícita. Los recursos no administrados incluyen cosas como
+ * manejadores de archivos, conexiones a bases de datos, conexiones de red, etc., que no son
+ * gestionados automáticamente por el recolector de basura de .NET.
+ */
 namespace Servicio
 {
     public class SqlDbManager : IDisposable
@@ -10,12 +16,27 @@ namespace Servicio
         private readonly string _connectionString;
         private SqlConnection _connection;
 
+        /// <summary>
+        /// Constructor sin parametros, obtiene la stringconnection desde la configuracion de la app.
+        /// </summary>
         public SqlDbManager()
         {
             _connectionString = ConfigurationManager.ConnectionStrings["EBConnection"].ConnectionString;
             _connection = new SqlConnection(_connectionString);
         }
 
+        /// <summary>
+        /// Constructor con parametros para pasarle tu propio stringconnection
+        /// </summary>
+        public SqlDbManager(string connectionString)
+        {
+            _connectionString = connectionString;
+            _connection = new SqlConnection(_connectionString);
+        }
+
+        /// <summary>
+        /// Abre la conexion a base de datos
+        /// </summary>
         public void OpenConnection()
         {
             try
@@ -28,10 +49,13 @@ namespace Servicio
             catch (SqlException ex)
             {
                 LogError("Error al abrir la conexión.", ex);
-                throw; // Re-lanza la excepción para que pueda ser manejada más adelante si es necesario
+                throw; 
             }
         }
 
+        /// <summary>
+        /// Cierra la conexion a base de datos
+        /// </summary>
         public void CloseConnection()
         {
             try
@@ -48,6 +72,9 @@ namespace Servicio
             }
         }
 
+        /// <summary>
+        /// Ejecuta una lectura a la base de datos (SELECT) y devuelve la tabla de datos obtenida.
+        /// </summary>
         public DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
         {
             try
@@ -74,6 +101,9 @@ namespace Servicio
             }
         }
 
+        /// <summary>
+        /// Ejecuta acciones (INSERT, UPDATE, DELETE) en la base de datos.
+        /// </summary>
         public int ExecuteNonQuery(string query, SqlParameter[] parameters = null)
         {
             try
@@ -95,6 +125,9 @@ namespace Servicio
             }
         }
 
+        /// <summary>
+        /// Ejecuta una consulta Scalar (COUNT(*)) y devuelve un object con el resultado para ser convertido a conveniencia.
+        /// </summary>
         public object ExecuteScalar(string query, SqlParameter[] parameters = null)
         {
             try
@@ -118,10 +151,10 @@ namespace Servicio
 
         private void LogError(string message, Exception ex)
         {
-            // Aquí puedes implementar tu lógica de registro de errores
+
             Console.WriteLine($"{message} Detalles: {ex.Message}");
         }
-        //Branch
+        
         public void Dispose()
         {
             if (_connection != null)

@@ -16,3 +16,4 @@ C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.pdb
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Helpers.dll
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\Helpers.pdb
 C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Franco\FACULTAD\EASYBOX\EASYBOX\obj\Debug\EASYBOX.UserRegister.resources
